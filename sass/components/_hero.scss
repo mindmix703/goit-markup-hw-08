@@ -1,0 +1,334 @@
+/*герой-контейнер*/
+
+.hero {
+  width: 100%;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+
+  z-index: 2;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: $cubicBezier;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 528px;
+  padding: 40px;
+
+  background-color: $primaryWhiteColor;
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: $cubicBezier;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+
+  width: 30px;
+  height: 30px;
+
+  padding: 0px;
+  margin-top: 7px;
+  margin-right: 8px;
+  box-sizing: border-box;
+
+  border-radius: 50%;
+  border: solid 0px;
+  border-color: $primaryWhiteColor;
+
+  background-color: $primaryWhiteColor;
+}
+
+.modal-title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.close-icon {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: $cubicBezier;
+}
+
+.modal-close:hover .close-icon,
+.modal-close:focus .close-icon {
+  fill: $accentColor;
+}
+
+.name,
+.telephone,
+.email,
+.textarea {
+  display: flex;
+  text-align: left;
+  margin-bottom: 4px;
+
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: $secondTextColor;
+  box-sizing: content-box;
+}
+
+.name {
+  width: 25px;
+}
+.telephone {
+  width: 50px;
+}
+.email {
+  width: 35px;
+}
+.textarea {
+  width: 80px;
+}
+
+.name-relative,
+.telephone-relative,
+.email-relative {
+  position: relative;
+}
+
+.name-icon,
+.email-icon {
+  position: absolute;
+  left: 12px;
+  top: 28px;
+}
+
+.telephone-icon {
+  position: absolute;
+  left: 11px;
+  top: 28px;
+}
+
+.name-input,
+.telephone-input,
+.email-input {
+  width: 448px;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 0 0 0 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: $cubicBezier;
+}
+
+.name-icon,
+.email-icon,
+.telephone-icon {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: $cubicBezier;
+}
+
+.name-input:focus,
+.telephone-input:focus,
+.email-input:focus {
+  border-color: $accentColor;
+  outline: none;
+}
+
+.name-input:focus + .name-icon,
+.telephone-input:focus + .telephone-icon,
+.email-input:focus + .email-icon {
+  fill: $accentColor;
+}
+
+.email-input:invalid {
+  border-color: red;
+}
+
+.email-input:invalid + .email-icon {
+  fill: red;
+}
+
+.textarea-input {
+  width: 448px;
+  height: 120px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  resize: none;
+  outline: none;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: $cubicBezier;
+}
+
+.textarea-input:focus {
+  border-color: $accentColor;
+}
+
+.checkbox {
+  @extend %centeredFlex;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+
+  color: $secondTextColor;
+}
+
+.checkbox-link {
+  margin-left: 5px;
+  margin-bottom: 2px;
+
+  color: $accentColor;
+  text-decoration-line: underline;
+}
+
+.checkbox-div {
+  @extend %centeredFlex;
+
+  margin-bottom: 30px;
+  margin-left: 12px;
+}
+
+.checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.icon-span {
+  display: inline-block;
+  margin-right: 7px;
+
+  width: 16px;
+  height: 15px;
+  color: #212121;
+  border: 2px solid $primaryBlackColor;
+  border-radius: 2px;
+  transition-property: background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: $cubicBezier;
+}
+
+.checkbox-input:checked + .icon-span {
+  background-image: url(../images/icons/check.svg);
+  background-color: $accentColor;
+  background-size: cover;
+  background-origin: border-box;
+  border: none;
+}
+
+.modal-submit {
+  width: 200px;
+  height: 50px;
+  padding: 10px 55px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center;
+
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  background-color: $accentColor;
+  color: $primaryWhiteColor;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+}
+
+.hero-title {
+  width: 696px;
+  margin: 0px auto 30px;
+  padding: 0;
+
+  color: $primaryWhiteColor;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hero-button {
+  display: inline-block;
+  align-items: center;
+  height: 50px;
+  min-width: 200px;
+  padding: 10px 32px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+
+  letter-spacing: 0.06em;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  color: $primaryWhiteColor;
+  background-color: $accentColor;
+}

@@ -1,0 +1,56 @@
+/* раздел - особенности */
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.visuallyhidden {
+  @extend %visuallyHidden;
+}
+
+.features-icon {
+  background-color: $backgroundColor;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+
+.features-list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  & .item {
+    width: 270px;
+  }
+
+  & .item + .item {
+    margin-left: 30px;
+  }
+}
+
+// .features-list .item + .item {
+//   margin-left: 30px;
+// }
+
+// .features-list .item {
+//   width: 270px;
+// }
+
+.features-list p {
+  margin: 0;
+  color: $secondTextColor;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.features-title {
+  padding: 0;
+  margin: 0 0 10px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

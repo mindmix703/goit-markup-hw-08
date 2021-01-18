@@ -1,0 +1,70 @@
+/* постоянные клиенты */
+.clients h2 {
+  margin: 0 0 50px;
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.client-list {
+  @extend %centeredFlex;
+  margin: 0;
+  padding: 0 0 94px;
+  justify-content: center;
+}
+
+.client {
+  width: 170px;
+  height: 90px;
+  max-width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid rgb(175, 177, 184);
+}
+
+.client-1 {
+  padding: 20px 63px 21px;
+  margin-right: 30px;
+}
+
+.client-2 {
+  padding: 19px 65px 19px;
+  margin-right: 30px;
+}
+
+.client-3 {
+  padding: 24px 64px 23px 65px;
+  margin-right: 30px;
+}
+
+.client-4 {
+  padding: 24px 45px 24px;
+  margin-right: 30px;
+}
+
+.client-5 {
+  padding: 22px 55px 21px 56px;
+  margin-right: 30px;
+}
+
+.client-6 {
+  padding: 22px 41px 23px;
+}
+
+.client-list a {
+  display: inline-block;
+  fill: $svgClientColor;
+
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: $cubicBezier;
+}
+
+.client-list .client:hover,
+.client-list .client:focus {
+  fill: $accentColor;
+  border-color: $accentColor;
+}
