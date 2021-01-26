@@ -211,7 +211,14 @@
         </h2>
         <ul class="team-list">
             <li class="item">
-                <img src="./images/team-card1.jpg" width="270" alt="product manager">
+                <div class="thumb-team">
+                    <img srcset="
+                                             ./images/mobile-team-card1.jpg   1x,
+                                             ./images/mobile-team-card1X2.jpg 2xf" 
+                    src="./images/mobile-team-card1.jpg" alt="product designer" width="450" />
+                   
+                </div>
+                
                     <h3 class= "team-member">Игорь Демьяненко</h3>
                     <p class="team-profession">Product Designer</p>
                     <div class="team-icon">
@@ -300,7 +307,14 @@
                     </div>
             </li>
               <li class="item">   
-                <img src="./images/team-card2.jpg" width="270" alt="frontend developer">
+                <div class="thumb-team">
+                    <img srcset="
+                                 ./images/mobile-team-card2.jpg   1x,
+                                 ./images/mobile-team-card2X2.jpg 2x"
+                        src="./images/mobile-team-card2.jpg"
+                        alt="frontend developer" width="450" />
+                        
+                </div> 
                 <h3 class= "team-member">Ольга Репина</h3>
                 <p class="team-profession">Frontend Developer</p>
                 <div class="team-icon">
@@ -386,7 +400,11 @@
                 </div>
             </li>
             <li class="item">
-                <img src="./images/team-card3.jpg" width="270" alt="marketing">
+                <div class="thumb-team">
+                    <img srcset="./images/mobile-team-card3.jpg 1x, ./images/mobile-team-card3X2.jpg 2x" 
+                    src="./images/mobile-team-card3.jpg"
+                    alt="marketing" width="450" />
+                </div>   
                 <h3 class= "team-member">Николай Тарасов</h3>
                 <p class="team-profession">Marketing</p>
                 <div class="team-icon">
@@ -472,7 +490,13 @@
                 </div>
             </li>
             <li class="item">
-                <img src="./images/team-card4.jpg" width="270" alt="ui designer">
+                            <div class="thumb-team">
+                                <img srcset="
+                                            ./images/mobile-team-card4.jpg   1x,
+                                            ./images/mobile-team-card4X2.jpg 2x "
+                                            src="./images/mobile-team-card4.jpg"
+                                            alt="marketing" width="450" />
+                            </div>          
                 <h3 class= "team-member">Михаил Ермаков</h3>
                 <p class="team-profession">UI Designer</p>
                 <div class="team-icon">
@@ -565,8 +589,8 @@
    
 <!-- раздел№5 -->
 
-    <section class="clients container">
-        <div>
+    <section class="container">
+        <div class="clients">
             <h2>Постоянные клиенты</h2>
             <ul class="client-list">
                 <li class="list-item">
@@ -576,35 +600,35 @@
                         </svg>
                     </a>
                 </li>
-                <li>
+                <li class="list-item">
                     <a class="client client-2" href="" target="_blank">
                         <svg width="40" height="52">
                             <use href="./images/icons/svg-def-true.svg#icon-client-2"></use>
                         </svg>
                     </a>
                 </li>
-                <li>
+                <li class="list-item">
                     <a class="client client-3" href="" target="_blank">
                         <svg width="41" height="43">
                             <use href="./images/icons/svg-def-true.svg#icon-client-3"></use>
                         </svg>
                     </a>
                 </li>
-                <li>
+                <li class="list-item">
                     <a class="client client-4" href="" target="_blank">
                         <svg width="80" height="42">
                             <use href="./images/icons/svg-def-true.svg#icon-client-4"></use>
                         </svg>
                     </a>
                 </li>
-                <li>
+                <li class="list-item">
                     <a class="client client-5" href="" target="_blank">
                         <svg width="59" height="47">
                             <use href="./images/icons/svg-def-true.svg#icon-client-5"></use>
                         </svg>
                     </a>
                 </li>
-                <li>
+                <li class="list-item">
                     <a class="client client-6" href="" target="_blank">
                         <svg width="89" height="45">
                             <use href="./images/icons/svg-def-true.svg#icon-client-6"></use>
@@ -620,13 +644,12 @@
 <!--подвал-->
 
 <footer class="footer container">
-    <div>
-        <div class="footer-flex">
+    <div class="footer-inline-flex">
+        <div class="footer-flex"> 
             <a class="logo-footer" href="./index.html"><span class="logo-span">Web</span>Studio</a>
-            <h3 class="footer-join">Присоединяйтесь</h3>
-            <h3 class="mail-log">Подпишитесь на рассылку</h3>
-        </div>
-        <div class="address-flex">
+            <h3 class="footer-join footer-join-1">Присоединяйтесь</h3>
+            <h3 class="mail-log mail-log-1">Подпишитесь на рассылку</h3>
+        
         <address class="footer-address">
             <ul class="footer-list">
                 <li class="item">
@@ -640,6 +663,9 @@
                 </li>
             </ul>
         </address>
+        </div>
+        <div class="flex-child">
+        <h3 class="footer-join footer-join-2">Присоединяйтесь</h3>
         <ul class="footer-icons">
             <li class="item">
         <a class="icon" href="https://www.instagram.com" target="_blank">
@@ -731,7 +757,9 @@
         </a>
             </li>
         </ul>
-    
+        </div>
+        </div>
+        <h3 class="mail-log mail-log-2">Подпишитесь на рассылку</h3>
         <form class="mail" autocomplete="off">
                 <input class="mail-input" type="email" name="mail" placeholder="E-mail" />
                 <button class="mail-button" type="submit">Подписаться
@@ -740,8 +768,8 @@
                       </svg>
                 </button>      
         </form>
-        </div>
-        </div>
+    
+
 </footer>
 <script src="./js/modal.js"></script>
 </body>

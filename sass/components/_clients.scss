@@ -1,0 +1,116 @@
+/* постоянные клиенты */
+
+.clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.clients h2 {
+  margin: 0 0 30px;
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  @media screen and (max-width: 1169px) {
+    font-size: 28px;
+  }
+}
+
+.client-list {
+  @extend %centeredFlex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  @media screen and (max-width: 1169px) {
+    flex-wrap: wrap;
+  }
+}
+
+.client-1 {
+  padding: 20px 63px 21px;
+}
+
+.client-2 {
+  padding: 19px 65px 19px;
+}
+
+.client-3 {
+  padding: 24px 64px 23px 65px;
+}
+
+.client-4 {
+  padding: 24px 45px 24px;
+}
+
+.client-5 {
+  padding: 22px 55px 21px 56px;
+}
+
+.client-6 {
+  padding: 22px 41px 23px;
+}
+
+@media screen and (max-width: 767px) {
+  .client-1,
+  .client-2,
+  .client-3,
+  .client-4 {
+    margin-bottom: 30px;
+  }
+  .client-1,
+  .client-3,
+  .client-5 {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1169px) {
+  .client-1,
+  .client-2,
+  .client-4,
+  .client-5 {
+    margin-right: 30px;
+  }
+  .client-1,
+  .client-2,
+  .client-3 {
+    margin-bottom: 30px;
+  }
+}
+// @media screen and (min-width: 1170px) {
+//   .client:not(:last-child) {
+//     margin-left: 30px;
+//   }
+// }
+.client {
+  width: 170px;
+  height: 90px;
+  justify-content: center;
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid rgb(175, 177, 184);
+  @media screen and (max-width: 767px) {
+    width: 210px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1169px) {
+    width: 226px;
+  }
+}
+
+.client-list a {
+  display: inline-block;
+  fill: $svgClientColor;
+
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: $cubicBezier;
+}
+
+.client-list .client:hover,
+.client-list .client:focus {
+  fill: $accentColor;
+  border-color: $accentColor;
+}

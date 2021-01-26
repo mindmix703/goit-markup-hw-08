@@ -1,10 +1,17 @@
 /* раздел - особенности */
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
   @media screen and (max-width: 767px) {
     padding-top: 75px;
     padding-bottom: 45px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1170px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -15,7 +22,12 @@
 .features-icon {
   background-color: $backgroundColor;
   padding: 25px 100px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    padding: 25px 142px;
+  }
 }
+
 @media screen and (max-width: 767px) {
   .features-icon + .features-icon {
     margin-top: 30px;
@@ -25,20 +37,39 @@
 .features-list {
   margin: 0;
   padding: 0;
-
-  & .item {
-    width: 270px;
-    margin-left: auto;
-    margin-right: auto;
-    @media screen and (max-width: 767px) {
-      width: 100%;
-      text-align: center;
-      align-items: center;
-    }
+  text-align: center;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
+
+.features-list .item {
+  @media screen and (max-width: 767px) {
+    width: 450px;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1169px) {
+    width: 354px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .features-list .item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1169px) {
+  .features-list .item:nth-child(1),
+  .features-list .item:nth-child(3) {
+    margin-right: 30px;
+  }
+  .features-list .item:nth-child(1),
+  .features-list .item:nth-child(2) {
     margin-bottom: 30px;
   }
 }
@@ -58,9 +89,9 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-align: left;
-  @media screen and (min-width: 576px) and (max-width: 767px) {
-    text-align: center;
-  }
+  // @media screen and (min-width: 576px) and (max-width: 767px) {
+  //   text-align: center;
+  // }
 }
 
 .features-title {

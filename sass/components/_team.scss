@@ -3,7 +3,6 @@
   background-color: $backgroundColor;
   padding-top: 94px;
   padding-bottom: 94px;
-
   @media screen and (max-width: 767px) {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -15,12 +14,27 @@
 }
 
 .team-list {
-  display: flex;
-  margin: 0;
+  margin: 0px;
   padding: 0;
-
   & img {
     display: block;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1170px) {
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team-list .item:first-child,
+  .team-list .item:nth-child(3) {
+    margin-right: 30px;
+  }
+  .team-list .item:nth-child(1),
+  .team-list .item:nth-child(2) {
     margin-bottom: 30px;
   }
 }
@@ -30,10 +44,27 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
+  @media screen and (min-width: 768px) and (max-width: 1169px) {
+    width: 354px;
+    display: inline-block;
+  }
+  @media screen and (min-width: 1170px) {
+    width: 23%;
+  }
 }
 
-.team-list .item + .item {
-  margin-left: 30px;
+// @media screen and (min-width: 768px) {
+//   .team-list {
+//     width: calc((100% - 2 * 15px) / 2);
+//     margin: 15px;
+//   }
+// }
+
+@media screen and (min-width: 1170px) {
+  .team-list .item + .item {
+    margin-left: 28px;
+  }
 }
 
 .team h2 {
@@ -44,8 +75,23 @@
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+
   @media screen and (max-width: 1169px) {
     font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+
+.thumb-team {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 270px;
+  max-width: 450px;
+
+  & img {
+    display: block;
+    max-width: 100%;
+    height: auto;
     margin-bottom: 30px;
   }
 }
@@ -73,9 +119,15 @@
 .team-icon {
   display: flex;
   padding: 0px 32px 30px;
+  justify-content: center;
 
   & .icon + .icon {
     margin-left: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .team-list .item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
