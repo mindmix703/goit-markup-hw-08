@@ -3,8 +3,8 @@
   padding-top: 94px;
   padding-bottom: 94px;
   @media screen and (max-width: 767px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 75px;
+    padding-bottom: 45px;
   }
 }
 
@@ -15,33 +15,31 @@
 .features-icon {
   background-color: $backgroundColor;
   padding: 25px 100px;
-  margin-bottom: 30px;
-  // @media screen and (max-width: 767px) {
-  //   display: block;
-  // }
+}
+@media screen and (max-width: 767px) {
+  .features-icon + .features-icon {
+    margin-top: 30px;
+  }
 }
 
 .features-list {
-  // display: flex;
-
   margin: 0;
   padding: 0;
 
   & .item {
     width: 270px;
+    margin-left: auto;
+    margin-right: auto;
     @media screen and (max-width: 767px) {
-      width: 450px;
-      margin-bottom: 30px;
+      width: 100%;
       text-align: center;
       align-items: center;
     }
   }
-
-  & .item + .item {
-    margin-left: 30px;
-    @media screen and (max-width: 767px) {
-      margin-left: 0;
-    }
+}
+@media screen and (max-width: 767px) {
+  .features-list .item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -60,6 +58,9 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-align: left;
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .features-title {

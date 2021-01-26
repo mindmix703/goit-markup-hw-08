@@ -26,19 +26,19 @@
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    min-width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    min-width: 768px;
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1170px) {
   .container {
-    width: 1140px;
+    min-width: 1170px;
   }
 }
 
@@ -88,26 +88,36 @@
 
 /*герой-контейнер*/
 .hero {
+  width: 480px;
+  height: 400px;
   text-align: center;
   background-color: #c4c4c4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile-hero.jpg);
+  background-size: 480px 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    width: 480px;
-    height: 400px;
-    background-image: url(../images/mobile-hero.jpg);
-    background-size: 480px 400px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile-heroX2.jpg);
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 481px) {
   .hero {
     width: 768px;
     height: 400px;
-    background-image: url(//goit-markup-hw-08/images/tablet-hero.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet-hero.jpg);
     background-size: 768px 400px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+}
+
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet-heroX2.jpg);
   }
 }
 
@@ -115,11 +125,54 @@
   .hero {
     width: 1600px;
     height: 600px;
-    background-image: url(//goit-markup-hw-08/images/hero.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
     background-size: 1600px 600px;
     padding-top: 200px;
     padding-bottom: 200px;
   }
+}
+
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/heroX2.jpg);
+  }
+}
+
+.hero-title {
+  width: 360px;
+  margin: 0 auto 30px;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.61;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+  .hero-title {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+.hero-button {
+  display: inline-block;
+  align-items: center;
+  height: 50px;
+  min-width: 200px;
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  color: #ffffff;
+  background-color: #2196f3;
 }
 
 .backdrop {
@@ -156,6 +209,12 @@
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 576px) {
+  .modal {
+    width: 465px;
+  }
 }
 
 .modal-close {
@@ -259,6 +318,14 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 576px) {
+  .name-input,
+  .telephone-input,
+  .email-input {
+    width: 385px;
+  }
+}
+
 .name-icon,
 .email-icon,
 .telephone-icon {
@@ -303,6 +370,12 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 576px) {
+  .textarea-input {
+    width: 385px;
+  }
+}
+
 .textarea-input:focus {
   border-color: #2196f3;
 }
@@ -313,6 +386,14 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (max-width: 576px) {
+  .checkbox {
+    display: inline-flex;
+    font-size: 12px;
+    line-height: 1.66;
+  }
 }
 
 .checkbox-link {
@@ -379,43 +460,6 @@
   border: none;
 }
 
-.hero-title {
-  width: 360px;
-  margin: 0 auto 30px;
-  color: #ffffff;
-  font-weight: 900;
-  font-size: 26px;
-  line-height: 1.61;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-@media screen and (min-width: 1140px) {
-  .hero-title {
-    width: 696px;
-    font-size: 44px;
-    line-height: 1.36;
-  }
-}
-
-.hero-button {
-  display: inline-block;
-  align-items: center;
-  height: 50px;
-  min-width: 200px;
-  padding: 10px 32px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.06em;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  color: #ffffff;
-  background-color: #2196f3;
-}
-
 /* раздел - особенности */
 .features {
   padding-top: 94px;
@@ -424,15 +468,20 @@
 
 @media screen and (max-width: 767px) {
   .features {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 75px;
+    padding-bottom: 45px;
   }
 }
 
 .features-icon {
   background-color: #f5f4fa;
   padding: 25px 100px;
-  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .features-icon + .features-icon {
+    margin-top: 30px;
+  }
 }
 
 .features-list {
@@ -442,24 +491,21 @@
 
 .features-list .item {
   width: 270px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 767px) {
   .features-list .item {
-    width: 450px;
-    margin-bottom: 30px;
+    width: 100%;
     text-align: center;
     align-items: center;
   }
 }
 
-.features-list .item + .item {
-  margin-left: 30px;
-}
-
 @media screen and (max-width: 767px) {
-  .features-list .item + .item {
-    margin-left: 0;
+  .features-list .item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -472,6 +518,12 @@
   text-align: left;
 }
 
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .features-list p {
+    text-align: center;
+  }
+}
+
 .features-title {
   padding: 0;
   margin: 0 0 10px;
@@ -480,5 +532,205 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+/*раздел - чем мы занимаемся*/
+.visual-features h2 {
+  margin: 0 0 50px;
+  padding-bottom: 94px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+@media screen and (max-width: 1169px) {
+  .visual-features h2 {
+    display: none;
+  }
+}
+
+.visual-items {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.visual-items img {
+  display: none;
+}
+
+.visual-items .item + .item {
+  margin-left: 30px;
+}
+
+.relative-div {
+  position: relative;
+}
+
+.absolute-div {
+  position: absolute;
+  bottom: 0%;
+}
+
+.features-item {
+  margin: 0;
+  display: block;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.box-1 {
+  padding: 27px 83px 27px 82px;
+}
+
+.box-2 {
+  padding: 27px 85px;
+}
+
+.box-3 {
+  padding: 27px 90px 27px 91px;
+}
+
+.box-1, .box-2, .box-3 {
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+@media screen and (max-width: 1169px) {
+  .absolute-div {
+    display: none;
+  }
+}
+
+/*наша команда*/
+.team {
+  background-color: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+@media screen and (max-width: 767px) {
+  .team {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1169px) {
+  .team {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.team-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.team-list img {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.team-list .item {
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-list .item + .item {
+  margin-left: 30px;
+}
+
+.team h2 {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+@media screen and (max-width: 1169px) {
+  .team h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+
+.team-member {
+  margin: 0 0 10px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team-profession {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.team-icon {
+  display: flex;
+  padding: 0px 32px 30px;
+}
+
+.team-icon .icon + .icon {
+  margin-left: 10px;
+}
+
+/* team-icons */
+.icon-svg .instagram-path-1,
+.icon-svg .instagram-path-2,
+.icon-svg .instagram-path-3,
+.icon-svg .instagram-path-4,
+.icon-svg .twitter-path-1,
+.icon-svg .twitter-path-2,
+.icon-svg .facebook-path-1,
+.icon-svg .facebook-path-2,
+.icon-svg .linkedin-path-1,
+.icon-svg .linkedin-path-2,
+.icon-svg .linkedin-path-3,
+.icon-svg .linkedin-path-4 {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-svg:hover .instagram-path-1,
+.icon-svg:hover .twitter-path-1,
+.icon-svg:hover .facebook-path-1,
+.icon-svg:hover .linkedin-path-1 {
+  fill: #2196f3;
+}
+
+.icon-svg:hover .instagram-path-2,
+.icon-svg:hover .instagram-path-3,
+.icon-svg:hover .instagram-path-4,
+.icon-svg:hover .twitter-path-2,
+.icon-svg:hover .facebook-path-2,
+.icon-svg:hover .linkedin-path-2,
+.icon-svg:hover .linkedin-path-3,
+.icon-svg:hover .linkedin-path-4 {
+  fill: #ffffff;
+}
+
+.icon-svg {
+  width: 44px;
+  height: 44px;
 }
 /*# sourceMappingURL=main.css.map */
