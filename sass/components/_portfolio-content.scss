@@ -4,6 +4,22 @@
   border-top: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .thumb-portfolio {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+
+    & img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+    }
+  }
+}
+
 .portfolio-title {
   margin: 0 0 4px;
   padding: 0;

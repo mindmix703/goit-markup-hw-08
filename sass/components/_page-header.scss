@@ -1,4 +1,9 @@
 // шапка
+.header {
+  position: relative;
+  // padding-top: 32px;
+  // padding-bottom: 32px;
+}
 
 .header-box,
 .navigation,
@@ -6,30 +11,68 @@
   @extend %centeredFlex;
 }
 
-// .logo {
-//   font-family: "Raleway";
-//   font-style: normal;
-//   font-weight: bold;
-//   font-size: 26px;
-//   line-height: 1.19;
-//   letter-spacing: 0.03em;
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+  }
+}
 
-//   color: $primaryBlackColor;
-// }
+@media screen and (max-width: 767px) {
+  .navigation .logo {
+    margin-right: 276px;
+  }
+}
 
-// .logo-span {
-//   font-family: "Raleway";
+@media screen and (max-width: 767px) {
+  .menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
 
-//   color: $accentColor;
-// }
+  .menu-button .icon-cross {
+    display: none;
+  }
+
+  .menu-button.is-open .icon-cross {
+    display: block;
+  }
+
+  .menu-button.is-open .icon-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    background-color: $primaryWhiteColor;
+
+    &.is-open {
+      display: block;
+    }
+  }
+}
 
 .header-items .item:not(:last-child) {
   margin-right: 50px;
 }
 
 .header-items {
-  margin: 0 0 0 94px;
-  padding: 32px 0;
+  margin: 0 84px 0 88px;
+  padding: 0;
 
   color: $primaryTextColor;
   font-size: 14px;
@@ -38,15 +81,30 @@
   letter-spacing: 0.02em;
 }
 
+@media screen and (max-width: 767px) {
+  .header-items {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
 .header-items .link,
 .contacts-header .link {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  // padding-top: 32px;
+  // padding-bottom: 32px;
 
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: $cubicBezier;
+
+  @media screen and (max-width: 767px) {
+    padding: 0;
+  }
 }
+
 .envelope-icon,
 .smartphone-icon {
   transition-property: fill;
@@ -64,8 +122,14 @@
 
 .current {
   position: relative;
-
   color: $accentColor;
+}
+
+@media screen and (max-width: 767px) {
+  .header-items .item,
+  .contacts-header .item {
+    display: block;
+  }
 }
 
 .current::after {
@@ -85,13 +149,17 @@
 
 .contacts-header {
   display: flex;
-  margin: 0 0 0 auto;
   padding: 0;
-
+  margin: 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.02em;
+  @media screen and (min-width: 768px) {
+    display: block;
+    justify-content: left;
+    align-items: center;
+  }
 }
 
 .contacts-header .link {
@@ -101,20 +169,44 @@
   align-items: center;
 }
 
-.contacts-header .item + .item {
-  margin-left: 50px;
+@media screen and (min-width: 1200px) {
+  .contacts-header .item + .item {
+    margin-left: 50px;
+  }
 }
 
 .envelope-icon,
 .smartphone-icon {
-  margin-right: 10px;
+  @media screen and (min-width: 768px) {
+    margin-right: 7px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
 }
 
 .contacts-icon {
-  display: flex;
+  display: inline-flex;
+
+  // @media screen and (max-width: 1199px) {
+  //   display: block;
+  //   // flex-wrap: wrap;
+  // }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+.contacts-header .item:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .contacts-icon:hover,
 .contacts-icon:focus {
   fill: $accentColor;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-container {
+    padding: 21px 0;
+  }
 }
