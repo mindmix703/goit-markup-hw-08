@@ -1,7 +1,8 @@
 @charset "UTF-8";
 .header-box,
 .navigation,
-.header-items, .checkbox, .checkbox-div, .client-list, .mail-button, .portfolio-filter {
+.header-items,
+.menu-container, .checkbox, .checkbox-div, .client-list, .mail-button, .portfolio-filter {
   display: flex;
   align-items: center;
 }
@@ -94,6 +95,8 @@
 
 @media screen and (max-width: 767px) {
   .menu-container {
+    padding: 0;
+    margin: 0;
     display: none;
     position: absolute;
     top: 100%;
@@ -103,6 +106,13 @@
   }
   .menu-container.is-open {
     display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-items .link {
+    padding-bottom: 33px;
+    padding-top: 33px;
   }
 }
 
@@ -137,13 +147,6 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 767px) {
-  .header-items .link,
-  .contacts-header .link {
-    padding: 0;
-  }
-}
-
 .envelope-icon,
 .smartphone-icon {
   transition-property: fill;
@@ -167,7 +170,7 @@
 @media screen and (max-width: 767px) {
   .header-items .item,
   .contacts-header .item {
-    display: block;
+    display: inline-block;
   }
 }
 
@@ -188,8 +191,8 @@
   padding: 0;
   margin: 0;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.17;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
 }
 
@@ -239,7 +242,7 @@
 }
 
 .contacts-header .item:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 .contacts-icon:hover,

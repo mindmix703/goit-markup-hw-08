@@ -1,15 +1,26 @@
 // шапка
 .header {
   position: relative;
-  // padding-top: 32px;
-  // padding-bottom: 32px;
 }
 
 .header-box,
 .navigation,
-.header-items {
+.header-items,
+.menu-container {
   @extend %centeredFlex;
 }
+
+// .header-box {
+//   display: flex;
+//   align-items: center;
+// }
+// .navigation {
+//   display: flex;
+//   align-items: center;
+// }
+// .header-items {
+//   display: flex;
+// }
 
 @media screen and (min-width: 768px) {
   .header {
@@ -53,6 +64,8 @@
 
 @media screen and (max-width: 767px) {
   .menu-container {
+    padding: 0;
+    margin: 0;
     display: none;
     position: absolute;
     top: 100%;
@@ -63,6 +76,12 @@
     &.is-open {
       display: block;
     }
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-items .link {
+    padding-bottom: 33px;
+    padding-top: 33px;
   }
 }
 
@@ -100,9 +119,9 @@
   transition-duration: 250ms;
   transition-timing-function: $cubicBezier;
 
-  @media screen and (max-width: 767px) {
-    padding: 0;
-  }
+  // @media screen and (max-width: 767px) {
+  //   padding: 0;
+  // }
 }
 
 .envelope-icon,
@@ -128,7 +147,7 @@
 @media screen and (max-width: 767px) {
   .header-items .item,
   .contacts-header .item {
-    display: block;
+    display: inline-block;
   }
 }
 
@@ -152,8 +171,8 @@
   padding: 0;
   margin: 0;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.17;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
   @media screen and (min-width: 768px) {
     display: block;
@@ -197,16 +216,15 @@
   }
 }
 .contacts-header .item:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 .contacts-icon:hover,
 .contacts-icon:focus {
   fill: $accentColor;
 }
-
-@media screen and (min-width: 768px) {
-  .contacts-container {
+.contacts-container {
+  @media screen and (min-width: 768px) {
     padding: 21px 0;
   }
 }
