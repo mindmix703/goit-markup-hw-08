@@ -1,12 +1,4 @@
-.portfolio-content {
-  width: 100%;
-  min-width: 320px;
-  padding: 20px 24px;
-  border: 1px solid #eeeeee;
-  border-top: 0;
-}
-
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) {
   .thumb-portfolio {
     display: block;
     margin-left: auto;
@@ -15,12 +7,14 @@
   }
   & img {
     display: block;
-    max-width: 100%;
+    width: 100%;
+    max-width: 450px;
     height: auto;
   }
 }
 
 .portfolio-title {
+  width: 100%;
   margin: 0 0 4px;
   padding: 0;
   font-weight: 700;
@@ -30,6 +24,7 @@
 }
 
 .portfolio-service {
+  width: 100%;
   margin: 0;
   padding: 0;
 
@@ -39,28 +34,64 @@
   color: $secondTextColor;
 }
 
-@media screen and (min-width: 768px) {
-  .portfolio-list {
+.portfolio-list {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 60px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1200px) {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+    padding-bottom: 94px;
   }
 }
 
 .portfolio-list .item {
-  width: 100%;
-  display: block;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    display: block;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
 }
 
-// .portfolio-list .item:not(:nth-child(3n)) {
-//   margin-right: 30px;
-// }
+@media screen and (max-width: 767px) {
+  .portfolio-list .item + .item {
+    margin-top: 30px;
+  }
+}
 
-// .portfolio-list .item:not(:nth-last-child(-n + 3)) {
-//   margin-bottom: 30px;
-// }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-list .item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-list .item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-list .item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+}
 
 .portfolio-list img {
   display: block;
@@ -80,13 +111,11 @@
 
 .portfolio-box {
   position: relative;
-  width: 100%;
-  min-width: 320px;
-  max-width: 450px;
-  height: 294px;
-  max-height: 294px;
-
   overflow: hidden;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  max-height: 294px;
 }
 
 .overlay {
@@ -106,13 +135,56 @@
 }
 
 .overlay > p {
-  padding: 77px 24px;
-
+  margin: 0;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
 
   color: #ffffff;
+
+  @media screen and (max-width: 356px) {
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    padding: 22px 24px;
+  }
+
+  @media screen and (min-width: 357px) and (max-width: 375px) {
+    padding: 10px 24px;
+  }
+
+  @media screen and (min-width: 376px) and (max-width: 397px) {
+    padding: 20px 24px;
+  }
+
+  @media screen and (min-width: 397px) and (max-width: 425px) {
+    padding: 40px 24px;
+  }
+
+  @media screen and (min-width: 425px) and (max-width: 449px) {
+    padding: 55px 24px;
+  }
+
+  @media screen and (min-width: 450px) and (max-width: 767px) {
+    padding: 77px 24px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 50px 24px;
+  }
+}
+
+.portfolio-content {
+  width: 100%;
+  padding: 20px 20px 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .first-portfolio-content {
+    height: 147px;
+  }
 }
 
 .portfolio-box:hover .overlay {

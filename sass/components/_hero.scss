@@ -56,14 +56,15 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero {
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
       url(/goit-markup-hw-08/images/hero/compressed/hero-tablet.jpg);
-    background-size: cover;
+    background-size: 100%;
+    max-width: 768px;
     padding-top: 118px;
     padding-bottom: 118px;
   }
@@ -86,7 +87,6 @@
   .hero {
     width: 100%;
     height: 100%;
-    max-width: 1600px;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
@@ -94,9 +94,58 @@
       url(/goit-markup-hw-08/images/hero/compressed/hero-desktop.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    padding-top: 200px;
-    padding-bottom: 200px;
   }
+
+  @media screen and (min-width: 1200px) and (max-width: 1250px) {
+    .hero {
+      padding-top: 125px;
+      padding-bottom: 125px;
+    }
+  }
+
+  @media screen and (min-width: 1250px) and (max-width: 1300px) {
+    .hero {
+      padding-top: 135px;
+      padding-bottom: 135px;
+    }
+  }
+
+  @media screen and (min-width: 1300px) and (max-width: 1350px) {
+    .hero {
+      padding-top: 145px;
+      padding-bottom: 145px;
+    }
+  }
+
+  @media screen and (min-width: 1350px) and (max-width: 1450px) {
+    .hero {
+      padding-top: 155px;
+      padding-bottom: 155px;
+    }
+  }
+
+  @media screen and (min-width: 1450px) and (max-width: 1525px) {
+    .hero {
+      padding-top: 165px;
+      padding-bottom: 165px;
+    }
+  }
+
+  @media screen and (min-width: 1525px) and (max-width: 1599px) {
+    .hero {
+      padding-top: 185px;
+      padding-bottom: 185px;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .hero {
+      max-width: 1600px;
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+  }
+
   @media screen and (min-device-pixel-ratio: 2),
     screen and (-webkit-min-device-pixel-ratio: 2),
     screen and (-o-min-device-pixel-ratio: 2/1),
@@ -112,13 +161,17 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .tittle-button {
+.tittle-button {
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 480px;
-    margin-left: auto;
-    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 696px;
   }
 }
+
 .hero-title {
   justify-content: center;
   width: 100%;
@@ -135,14 +188,16 @@
   text-align: center;
 
   @media screen and (min-width: 1200px) {
-    width: 696px;
+    width: 100%;
     font-size: 44px;
     line-height: 1.36;
   }
 }
+
 .hero-title-button {
   height: 100%;
 }
+
 .hero-button {
   display: inline-block;
   align-items: center;

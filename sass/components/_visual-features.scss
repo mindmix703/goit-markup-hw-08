@@ -1,7 +1,7 @@
 /*раздел - чем мы занимаемся*/
 .visual-features h2 {
-  margin: 0 0 50px;
-  padding-bottom: 94px;
+  margin: 0;
+  padding-bottom: 50px;
 
   font-weight: bold;
   font-size: 36px;
@@ -15,14 +15,17 @@
 
 .visual-items {
   margin: 0;
-  padding: 0;
+  padding: 0 0 94px;
   display: flex;
 
-  & img {
-    display: none;
-  }
   & .item + .item {
     margin-left: 30px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    & img {
+      display: none;
+    }
   }
 }
 
