@@ -18,37 +18,47 @@
     <div class="header-box">
         <nav class="navigation">
             <a class="logo" href="./index.html"> <span class="logo-span">Web</span>Studio</a>
+        </nav>
+        <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                <use class="icon-menu" href="./images/icons/menu-close.svg#icon-menu_40px"></use>
+                <use class="icon-cross" href="./images/icons/menu-close.svg#icon-close_40px"></use>
+            </svg>
+        </button>
+        <div class="menu-container" data-menu>
             <ul class="header-items">
                 <li class="item"><a class="link" href="./index.html">Студия</a></li>
                 <li class="item"><a class="current link" href="./portfolio.html">Портфолио</a></li>
                 <li class="item"><a class="link" href="#contact">Контакты</a></li>
             </ul>
-        </nav>
-        <ul class="contacts-header">
-            <li class="item">
-                <a class="contacts-icon link" href="mailto:info@example.com">
-                    <svg class="envelope-icon" width="16" height="12">
-                        <use href="./images/icons/svg-def-true.svg#icon-envelope"></use>
-                    </svg>
-                    info@example.com
-                </a>
-            </li>
-            <li class="item">
-                <a class="contacts-icon link" href="tel:+380961111111">
-                    <svg class="smartphone-icon" width="10" height="16">
-                        <use href="./images/icons/svg-def-true.svg#icon-smartphone"></use>
-                    </svg>
-                    +38 096 111 11 11
-                </a>
-            </li>
-        </ul>
-    </div>
+            <div class="contacts-container" data-menu>
+                <ul class="contacts-header">
+                    <li class="item">
+                        <a class="contacts-icon link" href="mailto:info@devstudio.com">
+                            <svg class="envelope-icon" width="16" height="12">
+                                <use href="./images/icons/svg-def-true.svg#icon-envelope"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="contacts-icon link" href="tel:+380961111111">
+                            <svg class="smartphone-icon" width="10" height="16">
+                                <use href="./images/icons/svg-def-true.svg#icon-smartphone"></use>
+                            </svg>
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
 </header>
 
 <!--контент-->
 <main>
-  <section class="portfolio container">
-    <div>
+  <section class="container">
+    <div class="portfolio">
         <h1 class="visuallyhidden">Портфолио</h1>
             <ul class="portfolio-filter">
                 <li class="item"><a href="#">Все</a></li>
@@ -61,9 +71,27 @@
             <li class="item">
                     <a class="link" href="">
                     <div class="portfolio-box thumb-portfolio">
-                    <img srcset="./images/mobile-project1.jpg 1x, ./images/mobile-project1X2.jpg 2x"
-                    src="./images/mobile-project1.jpg" alt="Веб-сайт"
-                    width="450" />
+                        <picture>
+                            <source srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-1.webp 1x,
+                                                      ./images-desktop-webp@2x/portfolio-desktop-1@2x.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./images/portfolio/portfolio-desktop/portfolio-desktop/imagecompressor/portfolio-desktop-1-min.jpg 1x,
+                                                      ./images/portfolio/portfolio-desktop/portfolio-desktop@2x/imagecompressor/portfolio-desktop-1@2x-min.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-webp/portfolio-tablet-1.webp 1x,
+                                                      ./images/portfolio/portfolio-tablet/portfolio-tablet-webp@2x/portfolio-tablet-1@2x.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./images/portfolio/portfolio-tablet/portfolio-tablet/imagecompressor/portfolio-tablet-1-min.jpg 1x,
+                                                      ./images/portfolio/portfolio-tablet/portfolio-tablet@2x/imagecompressor/portfolio-tablet-1@2x-min.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-1.webp 1x,
+                                                        ./images/portfolio/portfolio-mobile/portfolio-mobile-webp@2x/portfolio-mobile-1@2x.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                            <source srcset="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-1-min.jpg 1x,
+                                                      ./images/portfolio/portfolio-mobile/portfolio-mobile@2x/imagecompressor/portfolio-mobile-1@2x-min.jpg 2x"
+                                media="(min-width: 320px)">
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-1-min.jpg" alt="Веб-сайт">
+                        </picture>
                     <div class="overlay">
                             <p>
                              Технокряк это современная площадка распространения коронавируса.
@@ -82,9 +110,34 @@
                 <div class="thumb-portfolio">
                     <a href="">
                         <div class="portfolio-box">
-                            <img srcset="./images/mobile-project2.jpg 1x, ./images/mobile2X2.jpg 2x"
-                            src="./images/mobile-project2.jpg" alt="Дизайн"
-                            width="450"/>
+                            <picture>
+                                <source srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-2.webp 1x,
+                                                    ./images-desktop-webp@2x/portfolio-desktop-2@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source
+                                    srcset="./images/portfolio/portfolio-desktop/portfolio-desktop/imagecompressor/portfolio-desktop-2-min.jpg 1x,
+                                                    ./images/portfolio/portfolio-desktop/portfolio-desktop@2x/imagecompressor/portfolio-desktop-2@2x-min.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source
+                                    srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-webp/portfolio-tablet-2.webp 1x,
+                                                    ./images/portfolio/portfolio-tablet/portfolio-tablet-webp@2x/portfolio-tablet-2@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source
+                                    srcset="./images/portfolio/portfolio-tablet/portfolio-tablet/imagecompressor/portfolio-tablet-2-min.jpg 1x,
+                                                    ./images/portfolio/portfolio-tablet/portfolio-tablet@2x/imagecompressor/portfolio-tablet-2@2x-min.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source
+                                    srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-2.webp 1x,
+                                                      ./images/portfolio/portfolio-mobile/portfolio-mobile-webp@2x/portfolio-mobile-2@2x.webp 2x"
+                                    media="(min-width: 320px)" type="image/webp">
+                                <source
+                                    srcset="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-2-min.jpg 1x,
+                                                    ./images/portfolio/portfolio-mobile/portfolio-mobile@2x/imagecompressor/portfolio-mobile-2@2x-min.jpg 2x"
+                                    media="(min-width: 320px)">
+                                <img src="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-2-min.jpg"
+                                    alt="Дизайн">
+                            </picture>
+
                             <div class="overlay">
                                 <p>
                                     Технокряк это современная площадка распространения коронавируса.
@@ -104,7 +157,34 @@
             <li class="item">
                     <a href="">
                     <div class="portfolio-box">
-                    <img src="./images/project3.jpg" alt="Приложение">
+                        <picture>
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-3.webp 1x,
+                                                    ./images-desktop-webp@3x/portfolio-desktop-3@2x.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop/imagecompressor/portfolio-desktop-3-min.jpg 1x,
+                                                    ./images/portfolio/portfolio-desktop/portfolio-desktop@2x/imagecompressor/portfolio-desktop-3@2x-min.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-webp/portfolio-tablet-3.webp 1x,
+                                                    ./images/portfolio/portfolio-tablet/portfolio-tablet-webp@2x/portfolio-tablet-3@2x.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet/imagecompressor/portfolio-tablet-3-min.jpg 1x,
+                                                    ./images/portfolio/portfolio-tablet/portfolio-tablet@2x/imagecompressor/portfolio-tablet-3@2x-min.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-3.webp 1x,
+                                                    ./images/portfolio/portfolio-mobile/portfolio-mobile-webp@2x/portfolio-mobile-3@2x.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-3-min.jpg 1x,
+                                                    ./images/portfolio/portfolio-mobile/portfolio-mobile@2x/imagecompressor/portfolio-mobile-3@2x-min.jpg 2x"
+                                media="(min-width: 320px)">
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-3-min.jpg"
+                                alt="Приложение">
+                        </picture>
                     <div class="overlay">
                         <p>
                             Технокряк это современная площадка распространения коронавируса.
@@ -122,7 +202,34 @@
             <li class="item">
                     <a href="">
                     <div class="portfolio-box thumb-portfolio">
-                    <img src="./images/project4.jpg" alt="Маркетинг">
+                        <picture>
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-4.webp 1x,
+                                            ./images-desktop-webp@2x/portfolio-desktop-4@2x.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop/imagecompressor/portfolio-desktop-4-min.jpg 1x,
+                                            ./images/portfolio/portfolio-desktop/portfolio-desktop@2x/imagecompressor/portfolio-desktop-4@2x-min.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-webp/portfolio-tablet-4.webp 1x,
+                                            ./images/portfolio/portfolio-tablet/portfolio-tablet-webp@2x/portfolio-tablet-4@2x.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet/imagecompressor/portfolio-tablet-4-min.jpg 1x,
+                                            ./images/portfolio/portfolio-tablet/portfolio-tablet@2x/imagecompressor/portfolio-tablet-4@2x-min.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-4.webp 1x,
+                                            ./images/portfolio/portfolio-mobile/portfolio-mobile-webp@2x/portfolio-mobile-4@2x.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-4-min.jpg 1x,
+                                            ./images/portfolio/portfolio-mobile/portfolio-mobile@2x/imagecompressor/portfolio-mobile-4@2x-min.jpg 2x"
+                                media="(min-width: 320px)">
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-4-min.jpg"
+                                alt="Маркетинг">
+                        </picture>
                     <div class="overlay">
                         <p>
                             Технокряк это современная площадка распространения коронавируса.
@@ -140,7 +247,33 @@
             <li class="item">
                     <a href="">
                     <div class="portfolio-box thumb-portfolio">
-                    <img src="./images/project5.jpg" alt="Приложение">
+                        <picture>
+                            <source srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-5.webp 1x,
+                                            ./images-desktop-webp@2x/portfolio-desktop-5@2x.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop/imagecompressor/portfolio-desktop-5-min.jpg 1x,
+                                            ./images/portfolio/portfolio-desktop/portfolio-desktop@2x/imagecompressor/portfolio-desktop-5@2x-min.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-webp/portfolio-tablet-5.webp 1x,
+                                            ./images/portfolio/portfolio-tablet/portfolio-tablet-webp@2x/portfolio-tablet-5@2x.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet/imagecompressor/portfolio-tablet-5-min.jpg 1x,
+                                            ./images/portfolio/portfolio-tablet/portfolio-tablet@2x/imagecompressor/portfolio-tablet-5@2x-min.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-5.webp 1x,
+                                            ./images/portfolio/portfolio-mobile/portfolio-mobile-webp@2x/portfolio-mobile-5@2x.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-5-min.jpg 1x,
+                                            ./images/portfolio/portfolio-mobile/portfolio-mobile@2x/imagecompressor/portfolio-mobile-5@2x-min.jpg 2x"
+                                media="(min-width: 320px)">
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-5-min.jpg"
+                                alt="Приложение">
+                        </picture>
                     <div class="overlay">
                         <p>
                             Технокряк это современная площадка распространения коронавируса.
@@ -158,7 +291,33 @@
             <li class="item">
                     <a href="">
                     <div class="portfolio-box thumb-portfolio">
-                    <img src="./images/project6.jpg" alt="Веб-сайт">
+                        <picture>
+                            <source srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-6.webp 1x,
+                                                                    ./images-desktop-webp@2x/portfolio-desktop-6@2x.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop/imagecompressor/portfolio-desktop-6-min.jpg 1x,
+                                                                    ./images/portfolio/portfolio-desktop/portfolio-desktop@2x/imagecompressor/portfolio-desktop-6@2x-min.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-webp/portfolio-tablet-6.webp 1x,
+                                                                    ./images/portfolio/portfolio-tablet/portfolio-tablet-webp@2x/portfolio-tablet-6@2x.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet/imagecompressor/portfolio-tablet-6-min.jpg 1x,
+                                                                    ./images/portfolio/portfolio-tablet/portfolio-tablet@2x/imagecompressor/portfolio-tablet-6@2x-min.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-6.webp 1x,
+                                                                    ./images/portfolio/portfolio-mobile/portfolio-mobile-webp@2x/portfolio-mobile-6@2x.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-6-min.jpg 1x,
+                                                                    ./images/portfolio/portfolio-mobile/portfolio-mobile@2x/imagecompressor/portfolio-mobile-6@2x-min.jpg 2x"
+                                media="(min-width: 320px)">
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-6-min.jpg"
+                                alt="Веб-сайт">
+                        </picture>
                     <div class="overlay">
                         <p>
                             Технокряк это современная площадка распространения коронавируса.
@@ -176,7 +335,33 @@
             <li class="item">
                     <a href="">
                     <div class="portfolio-box thumb-portfolio">
-                    <img src="./images/project7.jpg" alt="Дизайн">
+                        <picture>
+                            <source srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-7.webp 1x,
+                                                                    ./images-desktop-webp@2x/portfolio-desktop-7@2x.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop/imagecompressor/portfolio-desktop-7-min.jpg 1x,
+                                                                    ./images/portfolio/portfolio-desktop/portfolio-desktop@2x/imagecompressor/portfolio-desktop-7@2x-min.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-webp/portfolio-tablet-7.webp 1x,
+                                                                    ./images/portfolio/portfolio-tablet/portfolio-tablet-webp@2x/portfolio-tablet-7@2x.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet/imagecompressor/portfolio-tablet-7-min.jpg 1x,
+                                                                    ./images/portfolio/portfolio-tablet/portfolio-tablet@2x/imagecompressor/portfolio-tablet-7@2x-min.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-7.webp 1x,
+                                                                    ./images/portfolio/portfolio-mobile/portfolio-mobile-webp@2x/portfolio-mobile-7@2x.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-7-min.jpg 1x,
+                                                                    ./images/portfolio/portfolio-mobile/portfolio-mobile@2x/imagecompressor/portfolio-mobile-7@2x-min.jpg 2x"
+                                media="(min-width: 320px)">
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-7-min.jpg"
+                                alt="Дизайн">
+                        </picture>
                     <div class="overlay">
                         <p>
                             Технокряк это современная площадка распространения коронавируса.
@@ -194,6 +379,33 @@
             <li class="item">
                     <a href="">
                     <div class="portfolio-box thumb-portfolio">
+                        <picture>
+                            <source srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-8.webp 1x,
+                                                                    ./images-desktop-webp@2x/portfolio-desktop-8@2x.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop/imagecompressor/portfolio-desktop-8-min.jpg 1x,
+                                                                    ./images/portfolio/portfolio-desktop/portfolio-desktop@2x/imagecompressor/portfolio-desktop-8@2x-min.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-webp/portfolio-tablet-8.webp 1x,
+                                                                    ./images/portfolio/portfolio-tablet/portfolio-tablet-webp@2x/portfolio-tablet-8@2x.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet/imagecompressor/portfolio-tablet-8-min.jpg 1x,
+                                                                    ./images/portfolio/portfolio-tablet/portfolio-tablet@2x/imagecompressor/portfolio-tablet-8@2x-min.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-8.webp 1x,
+                                                                    ./images/portfolio/portfolio-mobile/portfolio-mobile-webp@2x/portfolio-mobile-8@2x.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-8-min.jpg 1x,
+                                                                    ./images/portfolio/portfolio-mobile/portfolio-mobile@2x/imagecompressor/portfolio-mobile-8@2x-min.jpg 2x"
+                                media="(min-width: 320px)">
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-8-min.jpg"
+                                alt="Приложение">
+                        </picture>
                     <img src="./images/project8.jpg" alt="Маркетинг">
                     <div class="overlay">
                         <p>
@@ -212,9 +424,33 @@
             <li class="item">
                     <a href="">
                     <div class="portfolio-box thumb-portfolio">
-                    <img srcset="./images/mobile-project9.jpg 1x, ./images/mobile-project9X2.jpg 2x" 
-                    src="./images/mobile-project9.jpg" alt="Приложение"
-                    width="450"/>
+                        <picture>
+                            <source srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-9.webp 1x,
+                                                                    ./images-desktop-webp@2x/portfolio-desktop-9@2x.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop/imagecompressor/portfolio-desktop-9-min.jpg 1x,
+                                                                    ./images/portfolio/portfolio-desktop/portfolio-desktop@2x/imagecompressor/portfolio-desktop-9@2x-min.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-webp/portfolio-tablet-9.webp 1x,
+                                                                    ./images/portfolio/portfolio-tablet/portfolio-tablet-webp@2x/portfolio-tablet-9@2x.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet/imagecompressor/portfolio-tablet-9-min.jpg 1x,
+                                                                    ./images/portfolio/portfolio-tablet/portfolio-tablet@2x/imagecompressor/portfolio-tablet-9@2x-min.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-webp/portfolio-mobile-9.webp 1x,
+                                                                    ./images/portfolio/portfolio-mobile/portfolio-mobile-webp@2x/portfolio-mobile-9@2x.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                            <source
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-9-min.jpg 1x,
+                                                                    ./images/portfolio/portfolio-mobile/portfolio-mobile@2x/imagecompressor/portfolio-mobile-9@2x-min.jpg 2x"
+                                media="(min-width: 320px)">
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile/imagecompressor/portfolio-mobile-9-min.jpg"
+                                alt="Приложение">
+                        </picture>
                     <div class="overlay">
                         <p>
                             Технокряк это современная площадка распространения коронавируса.
@@ -235,8 +471,8 @@
 </main>
 
 <!--подвал портфолио-->
-<footer class="footer container">
-    <div>
+<footer class="container">
+    <div class="footer">
         <div class="footer-flex">
             <a class="logo-footer" href="./index.html"><span class="logo-span">Web</span>Studio</a>
             <h3 class="footer-join">Присоединяйтесь</h3>
@@ -249,7 +485,7 @@
                         <a class="address" id="contact" href="#">г. Киев, пр-т Леси Украинки, 26</a>
                     </li>
                     <li class="item">
-                        <a href="mailto:info@example.com">info@example.com</a>
+                        <a href="mailto:info@devstudio.com">info@devstudio.com</a>
                     </li>
                     <li class="item">
                         <a href="tel:+380991111111">+38 099 111 11 11</a>
@@ -365,6 +601,7 @@
         </div>
     </div>
 </footer>
+<script src="./js/menu.js"></script>
 </body>
 
 </html>

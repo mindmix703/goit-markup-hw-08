@@ -2,7 +2,7 @@
 
 .clients {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 
 .clients h2 {
@@ -28,54 +28,25 @@
   }
 }
 
-.client-1 {
-  padding: 20px 63px 21px;
+.list-item {
+  display: flex;
+  padding: auto;
+  margin: auto;
 }
 
-.client-2 {
-  padding: 19px 65px 19px;
+.client {
+  padding-top: 20px;
 }
 
-.client-3 {
-  padding: 24px 64px 23px 65px;
-}
+.list-item {
+  margin-bottom: 30px;
 
-.client-4 {
-  padding: 24px 45px 24px;
-}
-
-.client-5 {
-  padding: 22px 55px 21px 56px;
-}
-
-.client-6 {
-  padding: 22px 41px 23px;
-}
-
-@media screen and (max-width: 767px) {
-  .client-1,
-  .client-2,
-  .client-3,
-  .client-4 {
-    margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    width: calc((100% - 30px) / 2);
   }
-  .client-1,
-  .client-3,
-  .client-5 {
-    margin-right: 30px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .client-1,
-  .client-2,
-  .client-4,
-  .client-5 {
-    margin-right: 30px;
-  }
-  .client-1,
-  .client-2,
-  .client-3 {
-    margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 3);
   }
 }
 

@@ -19,6 +19,7 @@
     <div class="header-box">
     <nav class="navigation">
         <a class="logo" href="./index.html"> <span class="logo-span">Web</span>Studio</a>
+        </nav>
         <button 
         type="button" 
         class="menu-button" 
@@ -39,11 +40,11 @@
             <div class="contacts-container" data-menu>
             <ul class="contacts-header">
                 <li class="item">
-                <a class="contacts-icon link" href="mailto:info@example.com">
+                <a class="contacts-icon link" href="mailto:info@devstudio.com">
                 <svg class="envelope-icon" width="16" height="12">
                     <use href="./images/icons/svg-def-true.svg#icon-envelope"></use>
                 </svg>
-                 info@example.com
+                 info@devstudio.com
                 </a>
                 </li>
                <li class="item">
@@ -57,73 +58,72 @@
             </ul>
             </div>
         </div>
-        </nav>
         </div>
     
 </header>
 
-<!--раздел №1-->
+<!-- раздел №1 -->
 <main>
-    <section class="hero">
-        <div class="container">
-               <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-               <button class="hero-button" data-modal-open>Заказать услугу</button>
-               <div class="backdrop is-hidden" data-modal>
+    <section class="container hero-container">
+        <div class="hero">
+            <div class="tittle-button">
+                <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
+                <button class="hero-button" data-modal-open>Заказать услугу</button>
+                <div class="backdrop is-hidden" data-modal>
                     <div class="modal">
                         <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
-                       <button data-modal-close class="modal-close">
-                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="15" cy="15" r="15" fill="white" />
-                            <circle cx="15" cy="15" r="14.5" stroke="black" stroke-opacity="0.1" />
-                            <path class="close-icon"
-                                d="M21 10.1079L19.8921 9L15.5 13.3921L11.1079 9L10 10.1079L14.3921 14.5L10 18.8921L11.1079 20L15.5 15.6079L19.8921 20L21 18.8921L16.6079 14.5L21 10.1079Z"
-                                fill="black" />
-                        </svg>
-                       </button>
-                       <form autocomplete="off">
-                           <div class="name-relative">
+                        <button data-modal-close class="modal-close">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15" cy="15" r="15" fill="white" />
+                                <circle cx="15" cy="15" r="14.5" stroke="black" stroke-opacity="0.1" />
+                                <path class="close-icon"
+                                    d="M21 10.1079L19.8921 9L15.5 13.3921L11.1079 9L10 10.1079L14.3921 14.5L10 18.8921L11.1079 20L15.5 15.6079L19.8921 20L21 18.8921L16.6079 14.5L21 10.1079Z"
+                                    fill="black" />
+                            </svg>
+                        </button>
+                        <form autocomplete="off">
+                            <div class="name-relative">
                                 <label class="name" for="name">Имя</label>
-                                <input class="name-input" type="text" name="name" id="name"/>
+                                <input class="name-input" type="text" name="name" id="name" />
                                 <svg class="name-icon" width="18" height="18">
                                     <use href="./images/icons/modal+send.svg#icon-person"></use>
                                 </svg>
-                           </div>
-                           
-                            <div class="telephone-relative" >
+                            </div>
+            
+                            <div class="telephone-relative">
                                 <label class="telephone" for="telephone">Телефон</label>
-                                <input class="telephone-input" type="number" name="telephone" id="telephone"/>
+                                <input class="telephone-input" type="number" name="telephone" id="telephone" />
                                 <svg class="telephone-icon" width="24" height="24">
                                     <use href="./images/icons/modal+send.svg#icon-phone"></use>
                                 </svg>
                             </div>
-                           <div class="email-relative" >
+                            <div class="email-relative">
                                 <label class="email" for="email">Почта</label>
-                                <input class="email-input" type="email" name="email" id="email"/>
+                                <input class="email-input" type="email" name="email" id="email" />
                                 <svg class="email-icon" width="18" height="18">
                                     <use href="./images/icons/modal+send.svg#icon-email"></use>
                                 </svg>
-                           </div>
-                           
-                           <label class="textarea" for="comment">Комментарий</label>
-                                <textarea
-                                  class="textarea-input"
-                                  name="comment"
-                                  id="comment"
-                                  placeholder="Введите текст"></textarea>
-                            <div class="checkbox-div">
-                                    <label class="checkbox" for="chechbox">
-                                    <input class="checkbox-input" type="checkbox" name="chechbox" id="chechbox"/>
-                                    <span class="icon-span"></span>Соглашаюсь с рассылкой и принимаю<a class="checkbox-link" href="#">Условия договора</a>
-                                    </label>
                             </div>
-                                <button class="modal-submit" type="submit">Отправить</button>
-                       </form>
-               </div>
-               </div>
-        </div>       
+            
+                            <label class="textarea" for="comment">Комментарий</label>
+                            <textarea class="textarea-input" name="comment" id="comment" placeholder="Введите текст"></textarea>
+                            <div class="checkbox-div">
+                                <label class="checkbox" for="chechbox">
+                                    <input class="checkbox-input" type="checkbox" name="chechbox" id="chechbox" />
+                                    <span class="icon-span"></span>Соглашаюсь с рассылкой и принимаю<a class="checkbox-link"
+                                        href="#">Условия договора</a>
+                                </label>
+                            </div>
+                            <button class="modal-submit" type="submit">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
     </section>
         
- <!--раздел №2-->
+ <!-- раздел №2 -->
     <section class="features container">
         <div>
         <h2 class="visuallyhidden">Наши главные преимущества</h2>
@@ -220,26 +220,49 @@
     </section>
     
 <!--раздел №4-->
-    <section class="team container">
-        <div>
+    <section class="container team-background">
+        <div class="team">
         <h2>
             Наша команда
         </h2>
         <ul class="team-list">
             <li class="item">
                 <div class="thumb-team">
-                    <img srcset="
-                                             ./images/mobile-team-card1.jpg   1x,
-                                             ./images/mobile-team-card1X2.jpg 2xf" 
-                    src="./images/mobile-team-card1.jpg" alt="product designer" width="450" />
-                   
+                    <picture>
+                        <source 
+                            srcset="./images/team/team-desktop/team-desktop-webp/team-desktop-1.webp 1x,
+                              ./images/team/team-desktop/team-desktop-webp@2x/team-desktop-1@2x.webp 2x"
+                            media="(min-width: 1200px)" type="image/webp">
+                        <source
+                            srcset="./images/team/team-desktop/team-desktop/imagecompressor/team-desktop-1-min.jpg 1x,
+                              ./images/team/team-desktop/team-desktop@2x/imagecompressor/team-desktop-1@2x-min.jpg 2x"
+                            media="(min-width: 1200px)">
+                        <source
+                            srcset="./images/team/team-tablet/team-tablet-webp/team-tablet-1.webp 1x,
+                              ./images/team/team-tablet/team-tablet-webp@2x/team-tablet-1@2x.webp 2x"
+                            media="(min-width: 768px)" type="image/webp">
+                        <source
+                            srcset="./images/team/team-tablet/team-tablet/imagecompressor/team-tablet-1-min.jpg 1x,
+                              ./images/team/team-tablet/team-tablet@2x/imagecompressor/team-tablet-1@2x-min.jpg 2x"
+                            media="(min-width: 768px)">
+                        <source
+                            srcset="./images/team/team-mobile/team-mobile-webp/team-mobile-1.webp 1x,
+                                ./images/team/team-mobile/team-mobile-webp@2x/team-mobile-1@2x.webp 2x"
+                            media="(min-width: 320px)" type="image/webp">
+                        <source 
+                            srcset="./images/team/team-mobile/team-mobile/imagecompressor/team-mobile-1-min.jpg 1x,
+                              ./images/team/team-mobile/team-mobile@2x/imagecompressor/team-mobile-1@2x-min.jpg 2x" 
+                            media="(min-width: 320px)">
+                        <img src="./images/team/team-mobile/team-mobile/imagecompressor/team-mobile-1-min.jpg" alt="product designer">
+                    </picture>
+                                       
                 </div>
                 
                     <h3 class= "team-member">Игорь Демьяненко</h3>
                     <p class="team-profession">Product Designer</p>
                     <div class="team-icon">
 
-                        <!-- начало инлайновых svg -->
+                        <!-- начало svg -->
 
                         <a class="icon" href="https://www.instagram.com" target="_blank">
                             <svg class="icon-svg" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -324,12 +347,28 @@
             </li>
               <li class="item">   
                 <div class="thumb-team">
-                    <img srcset="
-                                 ./images/mobile-team-card2.jpg   1x,
-                                 ./images/mobile-team-card2X2.jpg 2x"
-                        src="./images/mobile-team-card2.jpg"
-                        alt="frontend developer" width="450" />
-                        
+                    <picture>
+                            <source
+                                srcset="./images/team/team-desktop/team-desktop-webp/team-desktop-2.webp 1x,
+                                                      ./images/team/team-desktop/team-desktop-webp@2x/team-desktop-2@2x.webp 2x"
+                                media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./images/team/team-desktop/team-desktop/imagecompressor/team-desktop-2-min.jpg 1x,
+                                                      ./images/team/team-desktop/team-desktop@2x/imagecompressor/team-desktop-2@2x-min.jpg 2x"
+                                media="(min-width: 1200px)">
+                            <source srcset="./images/team/team-tablet/team-tablet-webp/team-tablet-2.webp 1x,
+                                                      ./images/team/team-tablet/team-tablet-webp@2x/team-tablet-2@2x.webp 2x"
+                                media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./images/team/team-tablet/team-tablet/imagecompressor/team-tablet-2-min.jpg 1x,
+                                                      ./images/team/team-tablet/team-tablet@2x/imagecompressor/team-tablet-2@2x-min.jpg 2x"
+                                media="(min-width: 768px)">
+                            <source srcset="./images/team/team-mobile/team-mobile-webp/team-mobile-2.webp 1x,
+                                                        ./images/team/team-mobile/team-mobile-webp@2x/team-mobile-2@2x.webp 2x"
+                                media="(min-width: 320px)" type="image/webp">
+                            <source srcset="./images/team/team-mobile/team-mobile/imagecompressor/team-mobile-2-min.jpg 1x,
+                                                      ./images/team/team-mobile/team-mobile@2x/imagecompressor/team-mobile-2@2x-min.jpg 2x"
+                                media="(min-width: 320px)">
+                            <img src="./images/team/team-mobile/team-mobile/imagecompressor/team-mobile-2-min.jpg" alt="frontend developer">
+                    </picture>
                 </div> 
                 <h3 class= "team-member">Ольга Репина</h3>
                 <p class="team-profession">Frontend Developer</p>
@@ -417,9 +456,33 @@
             </li>
             <li class="item">
                 <div class="thumb-team">
-                    <img srcset="./images/mobile-team-card3.jpg 1x, ./images/mobile-team-card3X2.jpg 2x" 
-                    src="./images/mobile-team-card3.jpg"
-                    alt="marketing" width="450" />
+                    <picture>
+                        <source
+                            srcset="./images/team/team-desktop/team-desktop-webp/team-desktop-3.webp 1x,
+                                                                              ./images/team/team-desktop/team-desktop-webp@2x/team-desktop-3@2x.webp 2x"
+                            media="(min-width: 1200px)" type="image/webp">
+                        <source
+                            srcset="./images/team/team-desktop/team-desktop/imagecompressor/team-desktop-3-min.jpg 1x,
+                                                                              ./images/team/team-desktop/team-desktop@2x/imagecompressor/team-desktop-3@2x-min.jpg 2x"
+                            media="(min-width: 1200px)">
+                        <source
+                            srcset="./images/team/team-tablet/team-tablet-webp/team-tablet-3.webp 1x,
+                                                                              ./images/team/team-tablet/team-tablet-webp@2x/team-tablet-3@2x.webp 2x"
+                            media="(min-width: 768px)" type="image/webp">
+                        <source
+                            srcset="./images/team/team-tablet/team-tablet/imagecompressor/team-tablet-3-min.jpg 1x,
+                                                                              ./images/team/team-tablet/team-tablet@2x/imagecompressor/team-tablet-3@2x-min.jpg 2x"
+                            media="(min-width: 768px)">
+                        <source
+                            srcset="./images/team/team-mobile/team-mobile-webp/team-mobile-3.webp 1x,
+                                                                                ./images/team/team-mobile/team-mobile-webp@2x/team-mobile-3@2x.webp 2x"
+                            media="(min-width: 320px)" type="image/webp">
+                        <source
+                            srcset="./images/team/team-mobile/team-mobile/imagecompressor/team-mobile-3-min.jpg 1x,
+                                                                              ./images/team/team-mobile/team-mobile@2x/imagecompressor/team-mobile-3@2x-min.jpg 2x"
+                            media="(min-width: 320px)">
+                        <img src="./images/team/team-mobile/team-mobile/imagecompressor/team-mobile-3-min.jpg" alt="Marketing">
+                    </picture>
                 </div>   
                 <h3 class= "team-member">Николай Тарасов</h3>
                 <p class="team-profession">Marketing</p>
@@ -506,12 +569,35 @@
                 </div>
             </li>
             <li class="item">
-                            <div class="thumb-team">
-                                <img srcset="
-                                            ./images/mobile-team-card4.jpg   1x,
-                                            ./images/mobile-team-card4X2.jpg 2x "
-                                            src="./images/mobile-team-card4.jpg"
-                                            alt="marketing" width="450" />
+                <div class="thumb-team">
+                    <picture>
+                        <source
+                            srcset="./images/team/team-desktop/team-desktop-webp/team-desktop-4.webp 1x,
+                                                ./images/team/team-desktop/team-desktop-webp@2x/team-desktop-4@2x.webp 2x"
+                            media="(min-width: 1200px)" type="image/webp">
+                        <source
+                            srcset="./images/team/team-desktop/team-desktop/imagecompressor/team-desktop-4-min.jpg 1x,
+                                                ./images/team/team-desktop/team-desktop@2x/imagecompressor/team-desktop-4@2x-min.jpg 2x"
+                            media="(min-width: 1200px)">
+                        <source
+                            srcset="./images/team/team-tablet/team-tablet-webp/team-tablet-4.webp 1x,
+                                                ./images/team/team-tablet/team-tablet-webp@2x/team-tablet-4@2x.webp 2x"
+                            media="(min-width: 768px)" type="image/webp">
+                        <source
+                            srcset="./images/team/team-tablet/team-tablet/imagecompressor/team-tablet-4-min.jpg 1x,
+                                                ./images/team/team-tablet/team-tablet@2x/imagecompressor/team-tablet-4@2x-min.jpg 2x"
+                            media="(min-width: 768px)">
+                        <source
+                            srcset="./images/team/team-mobile/team-mobile-webp/team-mobile-4.webp 1x,
+                                                ./images/team/team-mobile/team-mobile-webp@2x/team-mobile-4@2x.webp 2x"
+                            media="(min-width: 320px)" type="image/webp">
+                        <source
+                            srcset="./images/team/team-mobile/team-mobile/imagecompressor/team-mobile-4-min.jpg 1x,
+                                                ./images/team/team-mobile/team-mobile@2x/imagecompressor/team-mobile-4@2x-min.jpg 2x"
+                            media="(min-width: 320px)">
+                        <img src="./images/team/team-mobile/team-mobile/imagecompressor/team-mobile-4-min.jpg" alt="ui Designer">
+                </picture>
+                                
                             </div>          
                 <h3 class= "team-member">Михаил Ермаков</h3>
                 <p class="team-profession">UI Designer</p>
@@ -605,8 +691,7 @@
    
 <!-- раздел№5 -->
 
-    <section class="container">
-        <div class="clients">
+    <section class="container clients">
             <h2>Постоянные клиенты</h2>
             <ul class="client-list">
                 <li class="list-item">
@@ -652,7 +737,6 @@
                     </a>
                 </li>
             </ul>
-        </div>
     </section>   
 </main>
 
@@ -672,7 +756,7 @@
                     <a class="address" id="contact" href="#">г. Киев, пр-т Леси Украинки, 26</a>
                 </li>
                 <li class="item">
-                    <a href="mailto:info@example.com">info@example.com</a>
+                    <a href="mailto:info@devstudio.com">info@devstudio.com</a>
                 </li>
                 <li class="item">
                     <a href="tel:+380991111111">+38 099 111 11 11</a>
@@ -789,5 +873,6 @@
 </footer>
 <script src="./js/modal.js"></script>
 <script src="./js/menu.js"></script>
+<script src="./js/test.js"></script>
 </body>
 </html>

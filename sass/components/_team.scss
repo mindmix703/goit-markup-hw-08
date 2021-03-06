@@ -1,6 +1,5 @@
 /*наша команда*/
 .team {
-  background-color: $backgroundColor;
   padding-top: 94px;
   padding-bottom: 94px;
   @media screen and (max-width: 767px) {
@@ -13,8 +12,12 @@
   }
 }
 
+.team-background {
+  background-color: $backgroundColor;
+}
+
 .team-list {
-  margin: 0px;
+  margin: 0;
   padding: 0;
   & img {
     display: block;
@@ -24,10 +27,16 @@
     display: flex;
     flex-wrap: wrap;
   }
-  @media screen and (min-width: 1200px) {
-    display: flex;
-  }
 }
+
+// .team-list {
+//   margin-bottom: 30px;
+
+//   @media screen and (min-width: 768px) {
+//     width: calc((100% - 30px) / 3);
+//   }
+// }
+
 @media screen and (min-width: 768px) {
   .team-list .item:first-child,
   .team-list .item:nth-child(3) {
@@ -44,22 +53,7 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    width: 354px;
-    display: inline-block;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 23%;
-  }
 }
-
-// @media screen and (min-width: 768px) {
-//   .team-list {
-//     width: calc((100% - 2 * 15px) / 2);
-//     margin: 15px;
-//   }
-// }
 
 @media screen and (min-width: 1200px) {
   .team-list .item + .item {
@@ -82,11 +76,11 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .thumb-team {
     margin-left: auto;
     margin-right: auto;
-    width: 450px;
+    width: 100%;
 
     & img {
       display: block;
@@ -125,7 +119,8 @@
     margin-left: 10px;
   }
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 767px) {
   .team-list .item:not(:last-child) {
     margin-bottom: 30px;
   }

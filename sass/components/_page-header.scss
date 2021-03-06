@@ -1,5 +1,6 @@
 // шапка
-.header {
+.header,
+.header-portfolio {
   position: relative;
 }
 
@@ -8,6 +9,14 @@
 .header-items,
 .menu-container {
   @extend %centeredFlex;
+}
+
+@media screen and (max-width: 767px) {
+  .header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 // .header-box {
@@ -29,18 +38,20 @@
 }
 
 @media screen and (max-width: 767px) {
-  .navigation .logo {
-    margin-right: 276px;
-  }
-}
-
-@media screen and (max-width: 767px) {
   .menu-button {
     display: inline-flex;
     margin: 0;
     padding: 0;
     border: none;
     background-color: transparent;
+  }
+  @media screen and (max-width: 767px) {
+    .menu-button :hover {
+      transition-property: fill;
+      transition-duration: 250ms;
+      transition-timing-function: $cubicBezier;
+      fill: $accentColor;
+    }
   }
 
   .menu-button .icon-cross {
@@ -71,57 +82,93 @@
     top: 100%;
     left: 0%;
     width: 100%;
+    max-width: 480px;
     background-color: $primaryWhiteColor;
 
     &.is-open {
       display: block;
+      height: 393px;
+      max-height: 393px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      z-index: 1;
+      border-top: 1px solid #eeeeee;
     }
   }
 }
 @media screen and (min-width: 768px) {
   .header-items .link {
-    padding-bottom: 33px;
-    padding-top: 33px;
+    padding-bottom: 34px;
+    padding-top: 34px;
   }
 }
 
-.header-items .item:not(:last-child) {
-  margin-right: 50px;
-}
+// .header-items .item:not(:last-child) {
+//   margin-right: 50px;
+// }
 
 .header-items {
-  margin: 0 84px 0 88px;
   padding: 0;
-
   color: $primaryTextColor;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 1.17;
+  line-height: 1.16;
   letter-spacing: 0.02em;
 }
 
 @media screen and (max-width: 767px) {
+  .current {
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-items .link {
+    display: block;
+  }
+
+  @media screen and (max-width: 767px) {
+    .header-items .item + .item {
+      margin-top: 40px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .contacts-icon {
+      display: block;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
   .header-items {
     display: flex;
-    margin: 0;
-    padding: 0;
-    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-items .item + .item {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-items {
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
 .header-items .link,
 .contacts-header .link {
-  // padding-top: 32px;
-  // padding-bottom: 32px;
-
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: $cubicBezier;
-
-  // @media screen and (max-width: 767px) {
-  //   padding: 0;
-  // }
 }
 
 .envelope-icon,
@@ -147,7 +194,7 @@
 @media screen and (max-width: 767px) {
   .header-items .item,
   .contacts-header .item {
-    display: inline-block;
+    display: block;
   }
 }
 
@@ -168,16 +215,40 @@
 
 .contacts-header {
   display: flex;
-  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.16;
   letter-spacing: 0.02em;
+
   @media screen and (min-width: 768px) {
     display: block;
     justify-content: left;
     align-items: center;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-header .item + .item {
+    margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-header {
+    padding-top: 60px;
+    padding-left: 0;
   }
 }
 
@@ -196,6 +267,7 @@
 
 .envelope-icon,
 .smartphone-icon {
+  margin-right: 10px;
   @media screen and (min-width: 768px) {
     margin-right: 7px;
   }
@@ -204,19 +276,23 @@
   }
 }
 
-.contacts-icon {
-  display: inline-flex;
-
-  // @media screen and (max-width: 1199px) {
-  //   display: block;
-  //   // flex-wrap: wrap;
-  // }
-  @media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
+  .contacts-icon {
     display: flex;
   }
 }
-.contacts-header .item:not(:last-child) {
-  margin-bottom: 7px;
+
+@media screen and (min-width: 768px) {
+  .contacts-header .item + .item {
+    margin-top: 10px;
+    margin-right: 17px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-header .item:not(:last-child) {
+    margin-bottom: 7px;
+  }
 }
 
 .contacts-icon:hover,

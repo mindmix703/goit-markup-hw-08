@@ -15,11 +15,11 @@
     padding: 16px 0;
   }
 
-  @media screen and (max-width: 1139px) {
+  @media screen and (max-width: 1199px) {
     padding: 26px 0;
   }
 
-  @media screen and (min-width: 1140px) {
+  @media screen and (min-width: 1200px) {
     padding: 24px 0 25px;
     font-size: 26px;
     line-height: 1.19;
@@ -27,5 +27,12 @@
   &-span {
     font-family: "Raleway";
     color: $accentColor;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+    padding-left: 15px;
   }
 }
